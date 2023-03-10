@@ -11,14 +11,18 @@ export default function Projects() {
       
       <nav>
         <ul className="projects-nav">
-         <div>
-          <li className='projects-nav-li'><NavLink to='/projects/games'> Games </NavLink></li>
-          <img src={icon} className='icon-games' alt='icon-games' />
-         </div>
-         <div>
-         <img src={icon2} className='icon-apps' alt='icon-apps' />
-          <li className='projects-nav-li'><NavLink to='/projects/apps'> Apps </NavLink></li>
-         </div>
+          <li className='projects-nav-li'>
+            <NavLink to='/projects/games'> 
+              <img src={icon} className='icon-games' alt='icon-games' />
+              <div className='icon-text'>Games</div>
+            </NavLink>
+          </li>
+          <li className='projects-nav-li'>
+            <NavLink to='/projects/apps'> 
+              <img src={icon2} className='icon-apps' alt='icon-apps' />
+              <div className='icon-text'>Apps</div>
+            </NavLink>
+          </li>
         </ul>
       </nav>
       <Outlet/>

@@ -242,7 +242,19 @@ body {
   padding: 0;
 }
 .projects-nav-li{
-  margin-right: 2rem;
+  display: inline-block;
+  position: relative;
+}
+.icon-text {
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-260%, -50%);
+  color: white;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px #000;
+  text-shadow: 0 0 1px #00ffff, 0 0 2px #00ffff, 0 0 3px #00ffff, 0 0 4px #00ffff, 0 0 5px #00ffff, 0 0 6px #00ffff, 0 0 7px #00ffff, 0 0 8px #00ffff, 0 0 9px #00ffff, 0 0 10px #00ffff;
 }
 .projects-nav-li:last-child {
   margin-right: 0;
@@ -269,14 +281,16 @@ body {
 }
 
 .icon-games {
-  width: 15vw;
+  width: 25vw;
   margin-left:-70px;
-  padding-right: 150px;
+  padding-right: 250px;
+ 
 } 
 
 .icon-apps {
-  width: 13vw;
+  width: 23vw;
   margin-top: 18px;
+  
 }
 
 .projects-nav-games {
