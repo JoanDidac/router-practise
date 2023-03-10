@@ -1,4 +1,295 @@
-div {
+body {
+  background: linear-gradient(to right, #ff6f00, #ff00ff, #0088ff);
+  animation: gradient 10s ease infinite;
+  background-size: 800% 800%;
+}
+
+.navbar {
+  background: linear-gradient(to right, #ff6f00, #ff00ff, #0088ff);
+  background-size: 600% 600%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  animation: gradient 10s ease infinite;
+  text-shadow: 0 0 1px #00ffff, 0 0 2px #00ffff, 0 0 3px #00ffff, 0 0 4px #00ffff, 0 0 5px #00ffff, 0 0 6px #00ffff, 0 0 7px #00ffff, 0 0 8px #00ffff, 0 0 9px #00ffff, 0 0 10px #00ffff;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin-left: 2rem;
+}
+
+.navbar li:first-child {
+  margin-left: 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar a:hover {
+  color: #00bcd4;
+}
+
+/* Contact Styles */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.contact-title {
+  font-size: 3rem;
+  color: #00bcd4;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.contact-input {
+  border: none;
+  border-radius: 5px;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  width: 300px;
+  font-size: 1.2rem;
+}
+
+.contact-button {
+  border: none;
+  border-radius: 5px;
+  padding: 0.8rem;
+  margin-top: 1rem;
+  background-color: #00bcd4;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.contact-button:hover {
+  background-color: #0097a7;
+}
+
+/* Home Styles */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.home-title {
+  font-size: 3rem;
+  color: #00bcd4;
+}
+
+.home-text {
   text-align: center;
-  padding: 10px;
+  max-width: 600px;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.home-image {
+  margin-top: 2rem;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Projects Styles */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.projects-title {
+  font-size: 4rem;
+  color: transparent;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #00bfff;
+  text-shadow: 0 0 1px #00ffff, 0 0 2px #00ffff, 0 0 3px #00ffff, 0 0 4px #00ffff, 0 0 5px #00ffff, 0 0 6px #00ffff, 0 0 7px #00ffff, 0 0 8px #00ffff, 0 0 9px #00ffff, 0 0 10px #00ffff;
+  background: linear-gradient(to right, #f0653b10 0%, #ed1c2355 50%, #f0653b0e 100%);
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #00bfff
+  }
+  
+  .projects-title:hover {
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #fff, 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff;
+  }
+
+.projects-title::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #00bfff;
+  -webkit-text-stroke: none;
+  -webkit-transform: translate3d(-2px, -2px, 0);
+  transform: translate3d(-2px, -2px, 0);
+  z-index: -1;
+}
+
+.projects-title::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #00bfff;
+  -webkit-text-stroke: none;
+  -webkit-transform: translate3d(2px, 2px, 0);
+  transform: translate3d(2px, 2px, 0);
+  z-index: -2;
+}
+
+@-webkit-keyframes glitch {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  20% {
+    -webkit-transform: translate3d(-2px, -2px, 0);
+    transform: translate3d(-2px, -2px, 0);
+  }
+  40% {
+    -webkit-transform: translate3d(2px, 2px, 0);
+    transform: translate3d(2px, 2px, 0);
+  }
+  60% {
+    -webkit-transform: translate3d(-2px, -2px, 0);
+    transform: translate3d(-2px, -2px, 0);
+  }
+  80% {
+    -webkit-transform: translate3d(2px, 2px, 0);
+    transform: translate3d(2px, 2px, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes glitch {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  20% {
+    -webkit-transform: translate3d(-2px, -2px, 0);
+    transform: translate3d(-2px, -2px, 0);
+  }
+  40% {
+    -webkit-transform: translate3d(2px, 2px, 0);
+    transform: translate3
+  }
+}
+
+.projects-text {
+  text-align: center;
+  max-width: 600px;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.projects-nav {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-top: 2rem;
+  padding: 0;
+}
+.projects-nav-li{
+  margin-right: 2rem;
+}
+.projects-nav-li:last-child {
+  margin-right: 0;
+}
+
+.projects-nav-link {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+.projects-nav-link:hover {
+  color: #00e1ff;
+  text-shadow: 0 0 1px #00ffff, 0 0 2px #00ffff, 0 0 3px #00ffff, 0 0 4px #00ffff, 0 0 5px #00ffff, 0 0 6px #00ffff, 0 0 7px #00ffff, 0 0 8px #00ffff, 0 0 9px #00ffff, 0 0 10px #00ffff;
+}
+
+.projects-nav-link:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 3px rgba(0, 188, 212, 0.5);
+}
+
+.icon-games {
+  width: 15vw;
+  margin-left:-70px;
+  padding-right: 150px;
+} 
+
+.icon-apps {
+  width: 13vw;
+  margin-top: 18px;
+}
+
+.projects-nav-games {
+  background-position: 0px 0px;
+  text-shadow: 0 0 1px #00ffff, 0 0 2px #00ffff, 0 0 3px #00ffff, 0 0 4px #00ffff, 0 0 5px #00ffff, 0 0 6px #00ffff, 0 0 7px #00ffff, 0 0 8px #00ffff, 0 0 9px #00ffff, 0 0 10px #00ffff;
+}
+
+.projects-nav-apps {
+  background-position: -32px 0px;
+  text-shadow: 0 0 1px #00ffff, 0 0 2px #00ffff, 0 0 3px #00ffff, 0 0 4px #00ffff, 0 0 5px #00ffff, 0 0 6px #00ffff, 0 0 7px #00ffff, 0 0 8px #00ffff, 0 0 9px #00ffff, 0 0 10px #00ffff;
+}
+
+a {
+  text-shadow: 0 0 1px #00ffff22, 0 0 2px #00ffff, 0 0 3px #00ffff42, 0 0 4px #00ffff, 0 0 5px #00ffff37, 0 0 6px #00ffff44, 0 0 7px #00ffff3a, 0 0 8px #00ffff28, 0 0 9px #00ffff49, 0 0 10px #00ffff4e;
+  color:white;
 }
